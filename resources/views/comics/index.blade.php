@@ -24,7 +24,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($comicsArray as $comic)
+                    @foreach ($comics as $comic)
                     <tr>
                         <th scope="row">{{$comic['title']}}</th>
                         <td>{{$comic['description']}}</td>

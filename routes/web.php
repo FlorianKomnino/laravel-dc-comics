@@ -21,6 +21,5 @@ Route::get('/', function () {
 
 
 Route::get('/comics', function () {
-    $comicsArray = config('comics');
-    return view('comics.index', compact('comicsArray'));
+    return view('comics.index');
 });
