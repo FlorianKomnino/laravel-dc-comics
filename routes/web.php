@@ -21,4 +21,5 @@ Route::get('/', function () {
 });
 
 
-Route::get('/comics', [ComicController::class, 'index']);
+Route::get('/comics', [ComicController::class, 'index'])->name('comics.index');
+Route::get('/comics/{id}', [ComicController::class, 'show'])->name('comics.show');
