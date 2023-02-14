@@ -3,7 +3,7 @@
         <div class="col-8">
             <div class="container">
                 <div class="row pt-5">
-                    @foreach ($comicsArray as $comic)
+                    @foreach ($comics as $comic)
                     <div class="col-2 singleCard">
                         <figure>
                             <img src="{{$comic['thumb']}}" class="img-fluid" alt="Logo">
