@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use app\Models\Comic;
+use App\Models\Comic;
 
 class ComicController extends Controller
 {
