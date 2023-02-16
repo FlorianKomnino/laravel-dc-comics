@@ -4,9 +4,18 @@
 
 @include('partials.header.topHeader')
 @include('partials.header.navbar')
+
+
 <div class="container">
     <div class="row">
         <div class="col-12 d-flex">
+
+            @if (session('message'))
+                <div class="alert alert-warning">
+                    {{session('message')}}
+                </div>
+            @endif
+
             <a class="btn btn-sm btn-primary ms-auto" href="{{ route("comics.create")}}">Create new comic</a>
         </div>
         <div class="col-12">
