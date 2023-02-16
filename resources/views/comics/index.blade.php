@@ -7,7 +7,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12 d-flex">
-            <button class="btn btn-sm btn-primary ms-auto">Create new comic</button>
+            <a class="btn btn-sm btn-primary ms-auto" href="{{ route("comics.create")}}">Create new comic</a>
         </div>
         <div class="col-12">
             <table class="table">
@@ -37,7 +37,7 @@
                         <td class="d-flex">
                             <a class="btn btn-sm btn-primary d-inline-block" href="{{route('comics.show', $comic->id)}}">Show</a>
                             <a class="btn btn-sm btn-warning d-inline-block" href="{{ route("comics.edit", $comic->id) }}">Edit</a>
-                            <form class="d-inline-block" action="{{ route('comics.destroy', $comic->id)}}" method="POST">
+                            <form class="d-inline-block formDeletable" action="{{ route('comics.destroy', $comic->id)}}" method="POST" data-element-name="{{$comic->title}}">
                                 @csrf
                                 @method('DELETE')
 
@@ -51,6 +51,8 @@
         </div>
     </div>
 </div>
+@endsection
 
-
+@section('scripts')
+    @vite('resources/js/deleteHandler.js')
 @endsection

@@ -17,6 +17,7 @@
 
 <body>
 @yield('singlePage')
+@yield('scripts')
 </body>
 
 </html>
