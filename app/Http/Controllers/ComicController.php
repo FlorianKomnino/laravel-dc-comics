@@ -40,6 +40,10 @@ class ComicController extends Controller
     {
         $data = $request->all();
 
+        $request->validate([
+            'title' => 'required'
+        ]);
+
         $newComic = new Comic();
         $newComic->title = $data['title'];
         $newComic->description = $data['description'];
@@ -87,6 +91,9 @@ class ComicController extends Controller
     public function update(Request $request, $id)
     {
         $data = $request->all();
+        $request->validate([
+            'title' => 'required'
+        ]);
 
         $comic = Comic::findOrFail($id);
         // $comic->title = $data['title'];

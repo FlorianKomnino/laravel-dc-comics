@@ -7,6 +7,13 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
+            @if ($errors->any())
+                <div class="alert alert-warning">
+                    @foreach ($errors->all() as $error)
+                        {{ $error }}
+                    @endforeach
+                </div>
+            @endif
             <form action="{{ route('comics.update', $comic->id) }}" method="POST">
                 @csrf
                 @method('PUT')
