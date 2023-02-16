@@ -7,8 +7,9 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <form action="{{ route('comics.edit'), [$id = $comic->id] }}" method="POST">
+            <form action="{{ route('comics.update', $comic->id) }}" method="POST">
                 @csrf
+                @method('PUT')
 
                 <div class="mb-3">
                     <label for="" class="form-label">
